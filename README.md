@@ -3,19 +3,25 @@ Hi! We are the Team TecnoTitans from Venezuela,and we are gonna participate The 
 ## Team Members 👨‍💻
 
 **Jiezhan Zheng:**
+
 Age:17
+
 He is the kind of person who, when facing a problem, prefers to explore and analyze solutions independently first. He believes that the process of solving a challenge alone helps deepen understanding—but he’s also not afraid to reach out to teammates when collaboration is the best way forward.
 He enjoys immersing himself in the digital world, whether it’s exploring new technologies, browsing forums, or losing track of time coding in silence. That said, he has a strong sense of balance and never lets the virtual world distract from his responsibilities in the real one.
 Jiezhan's personality is calm and composed, often taking a rational approach to challenges. Still, beneath that logical surface lies a thoughtful side that sometimes gives way to sentiment. He sees beauty in precision—but also in moments of quiet creativity.
 His role in the team is focused on programming, optimizing robot performance through thoughtful code, and contributing to both the logic and the emotional harmony of the group.
 
 **Jhonny Wu:**
+
 Age: 17
+
 He is the quietest member of the team, a man of few words and always calm. He likes to take things easy—sleeping and eating are among his favorite activities. Although he doesn’t talk much, he’s always there when needed. 
 His role on the team is that of a mechanic, responsible for assembling, adjusting, and making sure every part of the robot works properly.
 
 **Gabriel Granadillo:**
+
 Age: 15
+
 He is very persistent and always tries to find a better solution, and remembers the team to always tries and smile through the problems, like to relax bye drawing anime/comics and singing. 
 Role on the team: Presenter 
 He is the one who understands a bit of programming and the logic of the mechanical built but he is a good strategist and designer for the esthetic of the vehicle.
