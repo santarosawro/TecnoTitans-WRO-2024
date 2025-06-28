@@ -1,4 +1,4 @@
-Hi! We are the Team TecnoTitans from Venezuela,and we are gonna participate The Categorie Future Engineer WRO 2025!
+Hi! We are the Team TecnoTitans from E.U Santa Rosa School Venezuela,and we are gonna participate The Categorie Future Engineer WRO 2025!
 
 ## Team Members 👨‍💻
 
