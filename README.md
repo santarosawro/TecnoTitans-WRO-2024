@@ -26,6 +26,10 @@ He is very persistent and always tries to find a better solution, and remembers 
 Role on the team: Presenter 
 He is the one who understands a bit of programming and the logic of the mechanical built but he is a good strategist and designer for the esthetic of the vehicle.
 
+**Floresmy Escalona**
+
+She is the **Coach** of the team
+
 
 ## Ours History
 The idea of immersing ourselves in the world of robotics was born thanks to the introduction of the extracurricular subject of Robotics at our institution, Unidad Educativa Colegio Santa Rosa. This new learning space awakened in us a great curiosity for technology and motivated us to explore beyond the classroom. As we progressed through the activities, we discovered skills we didn’t know we had: creativity to design solutions, logic to program, manual dexterity to build circuits, and, above all, a great ability to work as a team.
@@ -35,29 +39,96 @@ At the same time, the dream of creating an efficient autonomous vehicle emerged.
 To learn what we needed, we turned to tutorials, educational videos, and all kinds of online resources. Little by little, our ideas began to take shape, and we managed to go from simple sketches to a functional model.
 During the first tests, we realized that our prototypes were too heavy and hard to maneuver. That’s when the idea of building a high-profile vehicle came up, with an elevated base that would allow better turns. This decision was key, as it greatly improved the vehicle's mobility, especially in spaces with obstacles or sharp curves.
 
-As for the electronic components, we carefully selected each one:
+## 🔧 **Hardware Description**
 
-•	**Arduino Uno:** It's the "brain" of the robot. It receives information from the sensors, processes it, and sends commands to the actuators (like the motors).
+The vehicle design focused on achieving a balance between stability, efficiency, maneuverability, and ease of maintenance, integrating compatible, accessible, and reliable components for educational competitive environments:
 
-•	**DC Motor:** Responsible for moving the vehicle. We chose this type of motor for its low cost and good performance.
+- **Main Controller:**  
+  Arduino Uno R3, chosen for its stability, large support community, and compatibility with various analog and digital peripherals.
 
-•	**H-Bridge (L298N):** Along with the Arduino Uno, it allows us to control the direction and speed of the motor.
+- **Motor Control Module:**  
+  Dual H-bridge driver (L298N), used to independently control the rotation direction and speed of two DC motors via PWM signals.
 
-•	**Jumpers and connecting wires:** Transmit signals and power between modules and the main board.
+- **Drive System:**  
+  - Rear-wheel drive using a single type C DC motor (3V–6V).  
+  - Mechanical torque transmission to both rear wheels via a transverse axle.  
+  - Differential 2WD rear configuration, enhancing stability and reducing mechanical complexity.
 
-•	**Servomotor:** Handles the vehicle's steering.
+- **Front Servo Motor:**  
+  Controls steering by adjusting the angle of the front wheels with precision, enabling tight turns and fine maneuvers—crucial for navigating curves or narrow paths.
 
-•	**18650 lithium battery:** Provides electric power to the entire system.
+- **Chassis Design:**  
+  The vehicle features a high chassis, offering several advantages:  
+  - Increased ground clearance to avoid interference with track elements.  
+  - Sufficient space for modular sensor mounting and internal wiring.  
+  - Facilitates maintenance and quick testing during competition.
 
-•	**Power button (Button 1):** Made testing easier, allowing us to start or stop the vehicle quickly.
+- **Power System:**  
+  Electrical separation between sensors and motors. A regulated power source (3V–6V) ensures stable supply and prevents voltage drops that could affect sensor accuracy or motor control.
 
-•	**Start button (Button 2):** Activates the movement of the vehicle.
 
-•	**Ultrasonic sensor HC-SR04:** Detects obstacles and measures distances to avoid collisions.
+🎯 **Sensor System and Environmental Perception**
 
-•	**Infrared sensor:** Detects objects in front of the vehicle.
+The perception system is designed to provide reliable environmental recognition and autonomous decision-making, combining sensors of different types:
 
-•	Battery holder: Holds and securely connects the batteries.
+- **3 HC-SR04 Ultrasonic Sensors:**  
+  Positioned at the front and sides (left and right), they detect obstacles and walls using sound wave reflection, triggering automatic evasive responses.
+
+- **2 Infrared Reflection Sensors (IR):**  
+  Used for detecting high-contrast lines (black/white), essential for alignment, edge detection, and path correction.
+
+- **1 Color Sensor (rear zone):**  
+  Detects specific colors (e.g., an orange line) to identify environmental events such as lap counting or recognition of special circuit zones.
+
+
+
+🧠 **Programming Logic and Autonomous Behavior**
+
+The vehicle’s programming is based on a finite state machine (FSM) architecture, enabling robust autonomous control in various environmental scenarios:
+
+- **Obstacle Avoidance:**  
+  Ultrasonic sensors trigger turning, reversing, or stopping decisions when walls or nearby objects are detected.
+
+- **Stall Recovery:**  
+  The robot detects stuck conditions (no progress over X cycles) and executes pivot or reverse routines to regain movement.
+
+- **Efficient Turning Maneuvers:**  
+  Thanks to the steering servo and weight distribution, the robot achieves precise turns with a smaller turning radius—ideal for sharp path changes.
+
+- **Color-Based Event Handling:**  
+  The rear sensor allows the robot to change behavior upon detecting visual markers (colored lines or zones), such as initiating lap counting.
+
+
+⚙️ **Code Architecture**
+
+The code is organized into independent functional modules, following best practices in embedded programming:
+
+- **Sensor Module:**  
+  Continuous data reading and filtering (moving averages) to improve accuracy under noisy conditions.
+
+- **Actuator Controllers:**  
+  PWM signal generation to regulate motor speed and steering servo angle.
+
+- **Navigation and FSM Logic:**  
+  Real-time environment evaluation to trigger state transitions (e.g., from “free movement” to “obstacle detected”).
+
+- **Safety and Recovery System:**  
+  Monitors conditions like collisions, invalid readings, or lack of movement, and activates emergency routines if needed.
+
+
+🛠️ **Mechanical Design and Assembly**
+
+- **Plastic Gearbox:**  
+  The main motor is coupled to a lightweight gearbox that reduces speed and increases torque, allowing more precise robot movement.
+
+- **High Chassis:**  
+  Provides greater tolerance to minor terrain irregularities, facilitates multi-level sensor installation, and improves internal ventilation.
+
+- **Weight Distribution:**  
+  Weight is concentrated on the rear axle (driven wheels), improving traction and reducing the risk of skidding or tipping during fast maneuvers.
+
+- **Sensor Mounting:**  
+  Strategically distributed to cover blind spots and avoid interference between different signal types (sound vs. light).
 
 We worked on the design and electronic simulation in Tinkercad, an online platform that allowed us to virtually build the vehicle’s circuit and test the components before assembling them physically. Thanks to this tool, we could experiment with different wiring configurations between the Arduino, motors, H-bridge, servomotor, and other elements, which helped us reduce errors during the actual assembly. This led to a more precise and efficient integration of the electronic system, making it easier to control and move the robot.
 
@@ -65,3 +136,10 @@ And so, in the midst of all that excitement, the name of our team was born: Tecn
 
 Beyond the technical result, this project meant a lot to us. We learned to solve real problems, make decisions as a team, and apply our knowledge to something tangible. In the end, we managed to build an agile, reliable, and functional autonomous vehicle—and most importantly, we did it together, with effort, learning, and a deep passion for technology.
 
+## **Conclusion**
+
+This project integrates the fundamentals of mechatronic engineering—electronics, programming, and mechanical design—focused on building a stable, functional, and competitive autonomous vehicle.
+
+Thanks to its modular architecture, both physically and in software, the system is easily scalable, allowing for quick adjustments, improvements, or repairs—crucial during competition.
+
+We are confident that this design meets the objectives of the Future Engineers category and reflects the effort, creativity, and technical rigor of the participating team.
