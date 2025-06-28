@@ -78,7 +78,7 @@ The vehicle design focused on achieving a balance between stability, efficiency,
   Electrical separation between sensors and motors. A regulated power source (3V–6V) ensures stable supply and prevents voltage drops that could affect sensor accuracy or motor control.
 
 
-🎯 **Sensor System and Environmental Perception**
+## 🎯 **Sensor System and Environmental Perception**
 
 The perception system is designed to provide reliable environmental recognition and autonomous decision-making, combining sensors of different types:
 
@@ -93,7 +93,7 @@ The perception system is designed to provide reliable environmental recognition 
 
 
 
-🧠 **Programming Logic and Autonomous Behavior**
+## 🧠 **Programming Logic and Autonomous Behavior**
 
 The vehicle’s programming is based on a finite state machine (FSM) architecture, enabling robust autonomous control in various environmental scenarios:
 
@@ -110,7 +110,7 @@ The vehicle’s programming is based on a finite state machine (FSM) architectur
   The rear sensor allows the robot to change behavior upon detecting visual markers (colored lines or zones), such as initiating lap counting.
 
 
-⚙️ **Code Architecture**
+## ⚙️ **Code Architecture**
 
 The code is organized into independent functional modules, following best practices in embedded programming:
 
@@ -127,7 +127,7 @@ The code is organized into independent functional modules, following best practi
   Monitors conditions like collisions, invalid readings, or lack of movement, and activates emergency routines if needed.
 
 
-🛠️ **Mechanical Design and Assembly**
+## 🛠️ **Mechanical Design and Assembly**
 
 - **Plastic Gearbox:**  
   The main motor is coupled to a lightweight gearbox that reduces speed and increases torque, allowing more precise robot movement.
@@ -141,7 +141,7 @@ The code is organized into independent functional modules, following best practi
 - **Sensor Mounting:**  
   Strategically distributed to cover blind spots and avoid interference between different signal types (sound vs. light).
 
-We worked on the design and electronic simulation in Tinkercad, an online platform that allowed us to virtually build the vehicle’s circuit and test the components before assembling them physically. Thanks to this tool, we could experiment with different wiring configurations between the Arduino, motors, H-bridge, servomotor, and other elements, which helped us reduce errors during the actual assembly. This led to a more precise and efficient integration of the electronic system, making it easier to control and move the robot.
+We worked on the design and electronic simulation in [Tinkercad](https://www.tinkercad.com/), an online platform that allowed us to virtually build the vehicle’s circuit and test the components before assembling them physically. Thanks to this tool, we could experiment with different wiring configurations between the Arduino, motors, H-bridge, servomotor, and other elements, which helped us reduce errors during the actual assembly. This led to a more precise and efficient integration of the electronic system, making it easier to control and move the robot.
 
 And so, in the midst of all that excitement, the name of our team was born: TecnoTitans. We wanted a name that reflected both our passion for technology and the strength and determination with which we faced every challenge. “Tecno” for the technological focus of our project, and “Titans” as a symbol of power, effort, and teamwork. We quickly identified with that name, and since then, we carry it with pride.
 
