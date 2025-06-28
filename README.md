@@ -27,7 +27,7 @@ Role on the team: Presenter
 He is the one who understands a bit of programming and the logic of the mechanical built but he is a good strategist and designer for the esthetic of the vehicle.
 
 
-##Ours History
+## Ours History
 The idea of immersing ourselves in the world of robotics was born thanks to the introduction of the extracurricular subject of Robotics at our institution, Unidad Educativa Colegio Santa Rosa. This new learning space awakened in us a great curiosity for technology and motivated us to explore beyond the classroom. As we progressed through the activities, we discovered skills we didn’t know we had: creativity to design solutions, logic to program, manual dexterity to build circuits, and, above all, a great ability to work as a team.
 
 At the same time, the dream of creating an efficient autonomous vehicle emerged. From the beginning, we knew it wouldn’t be easy, but that didn’t stop us. We dove into this project with great enthusiasm, facing challenges from planning and design to programming and integrating each component. Sometimes, the cost of materials and the time each stage required became obstacles, but our motivation always outweighed everything else.
